@@ -1,7 +1,7 @@
 {
   "name": "bipolar-stream",
   "version": "0.0.0",
-  "description": "Numerometer",
+  "description": "Helps detect change in a streaming fashion",
   "keywords": [
     "delta",
     "percent",
