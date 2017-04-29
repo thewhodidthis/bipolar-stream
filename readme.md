@@ -6,7 +6,7 @@
 # Install from github
 npm install thewhodidthis/bipolar-stream
 
-# Try the example
+# Try out example
 node node_modules/bipolar-stream/example
 ```
 
@@ -21,7 +21,5 @@ output.on('data', function() {
     process.stdout.write('\n');
 });
 
-output.on('error', function _onOutputError(error) {
-    console.error(error);
-});
+output.on('error', console.error);
 ```
