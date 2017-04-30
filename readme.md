@@ -17,7 +17,7 @@ const output = new Filter(100);
 
 process.stdin.pipe(output).pipe(process.stdout);
 
-output.on('data', function() {
+output.on('data', () => {
     process.stdout.write('\n');
 });
 
