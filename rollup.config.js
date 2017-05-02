@@ -6,8 +6,8 @@ export default {
   targets: [
     {
       format: 'cjs',
+      interop: false,
       dest: 'index.js',
-      interop: false
     }
   ]
 };
