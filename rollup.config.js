@@ -1,13 +1,8 @@
 export default {
   entry: 'index.es',
+  dest: 'index.js',
+  format: 'cjs',
   external: [
     'stream'
   ],
-  targets: [
-    {
-      format: 'cjs',
-      interop: false,
-      dest: 'index.js',
-    }
-  ]
 };
