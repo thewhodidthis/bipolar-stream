@@ -13,7 +13,7 @@ test('will compute', (t) => {
 
   bipolar.write(input.toString());
 
-  t.equals(parseInt(bipolar.read()), input - input);
+  t.equals(parseInt(bipolar.read(), 10), input - input);
   t.end();
 });
 
