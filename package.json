@@ -22,20 +22,16 @@
   },
   "scripts": {
     "test": "node test",
-    "cleanup": "rm -f *.log",
-    "lint": "eslint index.es; exit 0",
-    "start": "rollup -c",
-    "preexample": "npm start",
-    "example": "node example",
-    "preversion": "npm start"
+    "lint": "eslint index.es",
+    "start": "rollup -c"
   },
   "engines": {
-    "node": ">=6.6.0",
-    "npm": ">=3.10.3"
+    "node": ">=4.2.4",
+    "npm": ">=3.5.3"
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "latest",
+    "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "latest",
     "eslint-plugin-import": "latest",
     "rollup": "latest",
