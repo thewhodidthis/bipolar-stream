@@ -1,6 +1,6 @@
 {
   "name": "bipolar-stream",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Helps detect change in a streaming fashion",
   "keywords": [
     "delta",
