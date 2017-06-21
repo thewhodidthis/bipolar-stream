@@ -22,8 +22,8 @@
   },
   "scripts": {
     "test": "node test",
-    "lint": "eslint index.es test/*.js",
-    "start": "rollup -c"
+    "lint": "eslint index.es example/*.js test/*.js",
+    "start": "rollup -i index.es -f cjs -e stream -o index.js"
   },
   "engines": {
     "node": ">=4.2.4",
