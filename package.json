@@ -17,9 +17,6 @@
   "bugs": {
     "url": "https://github.com/thewhodidthis/bipolar-stream/issues"
   },
-  "directories": {
-    "example": "example"
-  },
   "scripts": {
     "test": "node test",
     "lint": "eslint test example index.es",
