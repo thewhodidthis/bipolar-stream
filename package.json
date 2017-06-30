@@ -22,8 +22,8 @@
   },
   "scripts": {
     "test": "node test",
-    "lint": "eslint index.es example/*.js test/*.js",
-    "start": "rollup -i index.es -f cjs -e stream -o index.js"
+    "lint": "eslint test example index.es",
+    "start": "rollup -e stream -f cjs -o index.js index.es"
   },
   "engines": {
     "node": ">=4.2.4",
@@ -34,8 +34,7 @@
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "latest",
     "eslint-plugin-import": "latest",
-    "rollup": "latest",
-    "tape": "latest"
+    "rollup": "latest"
   },
   "author": "sChzs BkgNns <sotirios.bakagiannis@gmail.com> (https://www.thewhodidthis.com)",
   "license": "Unlicense"
