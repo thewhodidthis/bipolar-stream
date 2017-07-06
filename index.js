@@ -2,21 +2,19 @@
 
 var stream = require('stream');
 
-class BipolarStream extends stream.Transform {
-  constructor(input) {
-    super();
+const bipolar = (prev) => {
+  let memo = prev;
 
-    this.memo = input;
-  }
+  return new stream.Transform({
+    transform(chunk, encoding, callback) {
+      const next = parseFloat(chunk);
+      const diff = next - memo;
 
-  _transform(chunk, encoding, callback) {
-    const input = parseFloat(chunk);
-    const delta = input - this.memo;
+      memo = next;
 
-    this.memo = input;
+      callback(null, diff.toString());
+    }
+  })
+};
 
-    callback(null, delta.toString());
-  }
-}
-
-module.exports = BipolarStream;
+module.exports = bipolar;
