@@ -2,11 +2,7 @@
   "name": "bipolar-stream",
   "version": "0.0.3",
   "description": "Helps detect change in a streaming fashion",
-  "keywords": [
-    "delta",
-    "percent",
-    "trending"
-  ],
+  "keywords": ["delta", "percent", "trending"],
   "main": "index.js",
   "module": "index.es",
   "homepage": "https://github.com/thewhodidthis/bipolar-stream#readme",
@@ -18,9 +14,13 @@
     "url": "https://github.com/thewhodidthis/bipolar-stream/issues"
   },
   "scripts": {
-    "test": "node test",
-    "lint": "eslint test example index.es",
-    "start": "rollup -e stream -f cjs -o index.js index.es"
+    "prestart": "eslint index.es '!(index*).js'",
+    "start": "rollup -e stream -f cjs index.es > index.js",
+    "pretest": "npm start",
+    "test": "node test"
+  },
+  "eslintConfig": {
+    "extends": "@thewhodidthis"
   },
   "engines": {
     "node": ">=4.2.4",
@@ -28,9 +28,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "latest",
-    "eslint-plugin-import": "latest",
+    "@thewhodidthis/eslint-config": "latest",
+    "eslint": "latest",
     "rollup": "latest",
     "tape": "latest"
   },
