@@ -12,8 +12,7 @@ node node_modules/bipolar-stream/example
 
 ### Usage
 ```js
-const Filter = require('bipolar-stream');
-const output = new Filter(100);
+const output = require('bipolar-stream')(100);
 
 process.stdin.pipe(output).pipe(process.stdout);
 
