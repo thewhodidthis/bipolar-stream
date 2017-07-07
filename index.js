@@ -1,20 +1,20 @@
-'use strict';
+'use strict'
 
-var stream = require('stream');
+const stream = require('stream')
 
 const bipolar = (prev) => {
-  let memo = prev;
+  let memo = prev
 
   return new stream.Transform({
     transform(chunk, encoding, callback) {
-      const next = parseFloat(chunk);
-      const diff = next - memo;
+      const next = parseFloat(chunk)
+      const diff = next - memo
 
-      memo = next;
+      memo = next
 
-      callback(null, diff.toString());
+      callback(null, diff.toString())
     }
   })
-};
+}
 
-module.exports = bipolar;
+module.exports = bipolar
