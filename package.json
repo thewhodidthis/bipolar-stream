@@ -2,7 +2,6 @@
   "name": "bipolar-stream",
   "version": "0.0.4",
   "description": "Helps detect change in a streaming fashion",
-  "keywords": ["delta", "percent", "trending"],
   "main": "index.js",
   "homepage": "https://github.com/thewhodidthis/bipolar-stream#readme",
   "repository": {
