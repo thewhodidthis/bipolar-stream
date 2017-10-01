@@ -1,4 +1,6 @@
-const Transform = require('stream').Transform
+'use strict'
+
+const { Transform } = require('stream')
 
 const test = require('tape')
 const bipolar = require('./')
