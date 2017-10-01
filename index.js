@@ -1,11 +1,11 @@
 'use strict'
 
-const stream = require('stream')
+const { Transform } = require('stream')
 
 const bipolar = (prev) => {
   let memo = prev
 
-  return new stream.Transform({
+  return new Transform({
     transform(chunk, encoding, callback) {
       const next = parseFloat(chunk)
       const diff = next - memo
