@@ -17,7 +17,7 @@ const stop = () => {
   clearInterval(feed)
 }
 
-console.log('Starting from 100, seed with random numbers and log deltas:')
+console.log('Starting from 100, seed with random numbers, log deltas:')
 
 setTimeout(stop, 1000)
 
