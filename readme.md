@@ -1,9 +1,8 @@
-## Bipolar stream
 > Helps detect change in a streaming fashion
 
 ### Setup
 ```sh
-# Install from github
+# Fetch latest from github
 npm install thewhodidthis/bipolar-stream
 
 # Try out example
