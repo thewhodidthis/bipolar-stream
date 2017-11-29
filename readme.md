@@ -3,7 +3,7 @@
 ### Setup
 ```sh
 # Fetch latest from github
-npm install thewhodidthis/bipolar-stream
+npm i thewhodidthis/bipolar-stream
 
 # Try out example
 node node_modules/bipolar-stream/example
