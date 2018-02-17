@@ -1,9 +1,9 @@
-import stream from 'stream'
+import { Transform } from 'stream'
 
 const bipolar = (prev) => {
   let memo = prev
 
-  return new stream.Transform({
+  return new Transform({
     transform(chunk, encoding, callback) {
       const next = parseFloat(chunk)
       const diff = next - memo
