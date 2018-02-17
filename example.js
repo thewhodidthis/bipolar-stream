@@ -1,25 +1,26 @@
 const bipolar = require('./')
 
-const output = bipolar(100)
-const feed = setInterval((stream) => {
-  const input = Math.floor(Math.random() * 100) - 50
+const filter = bipolar(100)
+
+const repeat = setInterval((stream) => {
+  const data = Math.floor(Math.random() * 100) - 50
 
   console.log('\n----')
-  console.log(input)
+  console.log(data)
 
-  stream.write(input.toString())
-}, 200, output)
+  stream.write(data.toString())
+}, 200, filter)
 
-const stop = () => {
+const cancel = () => {
   console.log('\n----\n')
 
-  output.end()
-  clearInterval(feed)
+  filter.end()
+  clearInterval(repeat)
 }
 
 console.log('Starting from 100, seed with random numbers, log deltas:')
 
-setTimeout(stop, 1000)
+setTimeout(cancel, 1000)
 
-output.pipe(process.stdout)
-output.on('error', console.error)
+filter.pipe(process.stdout)
+filter.on('error', console.error)
