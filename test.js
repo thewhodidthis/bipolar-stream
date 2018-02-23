@@ -2,12 +2,12 @@
 
 const { Transform } = require('stream')
 const { ok, equal } = require('tapeless')
-const bipolar = require('./')
+const bender = require('./')
 
-const source = 100
-const filter = bipolar(source)
+const offset = 100
+const filter = bender(offset)
 
-filter.write(source.toString())
+filter.write(offset.toString())
 
 ok(filter instanceof Transform, 'is a transform stream', 'does inherit')
-equal(parseInt(filter.read(), 10), source - source, 'math is accurate', 'will compute')
+equal(parseInt(filter.read(), 10), offset - offset, 'math is accurate', 'will compute')
