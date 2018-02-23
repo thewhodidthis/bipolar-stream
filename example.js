@@ -1,26 +1,29 @@
-const bipolar = require('./')
+'use strict'
 
-const filter = bipolar(100)
+const bender = require('./')
+
+const random = (x = 100) => Math.floor(Math.random() * x) - (x * 0.5)
+const filter = bender(100)
+
+filter.pipe(process.stdout)
+filter.on('error', console.error)
 
 const repeat = setInterval((stream) => {
-  const data = Math.floor(Math.random() * 100) - 50
+  const data = random().toString()
 
-  console.log('\n----')
+  console.log('----')
   console.log(data)
-
-  stream.write(data.toString())
+  stream.write(data)
+  console.log()
 }, 200, filter)
 
-const cancel = () => {
-  console.log('\n----\n')
+const cancel = (timer, stream) => {
+  clearInterval(timer)
 
-  filter.end()
-  clearInterval(repeat)
+  console.log('----')
+  stream.end()
 }
 
 console.log('Starting from 100, seed with random numbers, log deltas:')
 
-setTimeout(cancel, 1000)
-
-filter.pipe(process.stdout)
-filter.on('error', console.error)
+setTimeout(cancel, 1000, repeat, filter)
