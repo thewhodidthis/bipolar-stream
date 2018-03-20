@@ -1,6 +1,6 @@
 {
   "name": "bipolar-stream",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Helps detect change in a streaming fashion",
   "main": "index",
   "module": "index.mjs",
