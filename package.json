@@ -16,7 +16,7 @@
     "pretest": "eslint test.js",
     "test": "node test",
     "prestart": "eslint index.mjs",
-    "start": "rollup -f cjs -e stream --no-interop index.mjs > index.js",
+    "start": "rollup -c node:x -f cjs -e stream --environment PREFER_CONST --no-interop index.mjs > index.js",
     "preexample": "eslint example.js",
     "example": "node example"
   },
@@ -32,6 +32,7 @@
     "@thewhodidthis/eslint-config": "latest",
     "eslint": "latest",
     "rollup": "latest",
+    "rollup-config-x": "latest",
     "tapeless": "latest"
   },
   "keywords": [

@@ -1,6 +1,6 @@
 'use strict';
 
-var stream = require('stream');
+const stream = require('stream');
 
 const bipolar = (prev) => {
   let memo = prev;
