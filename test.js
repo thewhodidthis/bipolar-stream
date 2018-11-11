@@ -9,5 +9,10 @@ const filter = bender(offset)
 
 filter.write(offset.toString())
 
-ok(filter instanceof Transform, 'is a transform stream', 'does inherit')
-equal(parseInt(filter.read(), 10), offset - offset, 'math is accurate', 'will compute')
+ok
+  .test(filter instanceof Transform)
+  .describe('is a transform stream', 'does inherit')
+
+equal
+  .describe('math looks accurate', 'will compute')
+  .test(parseInt(filter.read(), 10), offset - offset)
