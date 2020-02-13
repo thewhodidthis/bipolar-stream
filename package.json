@@ -16,7 +16,7 @@
     "pretest": "eslint test.js",
     "test": "node test",
     "prestart": "eslint index.mjs",
-    "start": "rollup -c node:x -f cjs -e stream --environment PREFER_CONST --no-interop index.mjs > index.js",
+    "start": "rollup -c node:x -f cjs -e stream index.mjs --no-interop --preferConst > index.js",
     "preexample": "eslint example.js",
     "example": "node example"
   },
@@ -27,13 +27,12 @@
     "node": ">=6.11.0",
     "npm": ">=3.10.10"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@thewhodidthis/eslint-config": "latest",
-    "eslint": "latest",
-    "rollup": "latest",
-    "rollup-config-x": "latest",
-    "tapeless": "latest"
+    "@thewhodidthis/eslint-config": "^0.0.11",
+    "eslint": "^6.8.0",
+    "rollup": "^1.31.0",
+    "rollup-config-x": "^1.0.2",
+    "tapeless": "^0.0.7"
   },
   "keywords": [
     "bipolar",
