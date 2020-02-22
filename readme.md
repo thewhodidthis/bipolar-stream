@@ -11,13 +11,13 @@ node node_modules/bipolar-stream/example
 
 ### Usage
 ```js
-const output = require('bipolar-stream')(100);
+const output = require('bipolar-stream')(100)
 
-process.stdin.pipe(output).pipe(process.stdout);
+process.stdin.pipe(output).pipe(process.stdout)
 
 output.on('data', () => {
-    process.stdout.write('\n');
-});
+  process.stdout.write('\n')
+})
 
-output.on('error', console.error);
+output.on('error', console.error)
 ```
