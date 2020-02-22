@@ -2,42 +2,42 @@
   "name": "bipolar-stream",
   "version": "0.0.12",
   "description": "Helps detect change in a streaming fashion",
-  "main": "index",
-  "module": "index.mjs",
-  "homepage": "https://github.com/thewhodidthis/bipolar-stream#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thewhodidthis/bipolar-stream.git"
-  },
-  "bugs": {
-    "url": "https://github.com/thewhodidthis/bipolar-stream/issues"
-  },
-  "scripts": {
-    "pretest": "eslint test.js",
-    "test": "node test",
-    "prestart": "eslint index.mjs",
-    "start": "rollup -c node:x -f cjs -e stream index.mjs --no-interop --preferConst > index.js",
-    "preexample": "eslint example.js",
-    "example": "node example"
-  },
-  "eslintConfig": {
-    "extends": "@thewhodidthis"
-  },
-  "engines": {
-    "node": ">=6.11.0",
-    "npm": ">=3.10.10"
-  },
-  "devDependencies": {
-    "@thewhodidthis/eslint-config": "^0.0.11",
-    "eslint": "^6.8.0",
-    "rollup": "^1.31.0",
-    "rollup-config-x": "^1.0.2",
-    "tapeless": "^0.0.7"
-  },
   "keywords": [
     "bipolar",
     "stream"
   ],
-  "author": "sChzs BkgNns <sotirios.bakagiannis@gmail.com> (https://www.thewhodidthis.com)",
-  "license": "Unlicense"
+  "homepage": "https://github.com/thewhodidthis/bipolar-stream#readme",
+  "bugs": {
+    "url": "https://github.com/thewhodidthis/bipolar-stream/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thewhodidthis/bipolar-stream.git"
+  },
+  "license": "ISC",
+  "author": "Sotiri Bakagiannis <sotirios.bakagiannis@gmail.com> (http://thewhodidthis.com)",
+  "main": "index",
+  "module": "index.mjs",
+  "scripts": {
+    "preexample": "eslint example.js",
+    "example": "node example",
+    "prestart": "eslint index.mjs",
+    "start": "rollup -c node:x -f cjs -e stream -o index.js index.mjs --no-interop --preferConst",
+    "pretest": "eslint test.js",
+    "test": "node test"
+  },
+  "eslintConfig": {
+    "extends": "@thewhodidthis"
+  },
+  "devDependencies": {
+    "@thewhodidthis/eslint-config": "^0.0.17",
+    "eslint": "^6.8.0",
+    "rollup": "^1.31.1",
+    "rollup-config-x": "^1.0.4",
+    "tapeless": "^0.0.9"
+  },
+  "engines": {
+    "node": ">=6.11.0",
+    "npm": ">=3.10.10"
+  }
 }
