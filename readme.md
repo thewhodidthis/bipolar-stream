@@ -1,15 +1,23 @@
-> Helps detect change in a streaming fashion
+## about
 
-### Setup
+Helps detect change in a streaming fashion.
+
+## setup
+
+Fetch the latest version from the _npm_ registry:
+
 ```sh
-# Fetch latest from github
-npm i thewhodidthis/bipolar-stream
+# Add to "dependencies"
+npm install @thewhodidthis/bipolar-stream
 
-# Try out example
+# Try out the enclosed example
 node node_modules/bipolar-stream/example
 ```
 
-### Usage
+## usage
+
+Give it a starting value then use like any other stream:
+
 ```js
 const output = require('bipolar-stream')(100)
 
