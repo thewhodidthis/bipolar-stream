@@ -2,7 +2,7 @@
 
 const stream = require('stream');
 
-const bipolar = (prev) => {
+function bipolar(prev) {
   let memo = prev;
 
   return new stream.Transform({
@@ -15,6 +15,6 @@ const bipolar = (prev) => {
       callback(null, diff.toString());
     }
   })
-};
+}
 
 module.exports = bipolar;

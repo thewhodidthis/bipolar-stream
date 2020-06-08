@@ -1,6 +1,6 @@
 import { Transform } from 'stream'
 
-const bipolar = (prev) => {
+function bipolar(prev) {
   let memo = prev
 
   return new Transform({
