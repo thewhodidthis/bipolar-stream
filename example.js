@@ -11,6 +11,7 @@ filter.on('error', console.error)
 const repeat = setInterval((stream) => {
   const data = random().toString()
 
+  // Insert line break
   console.log()
   console.log(data)
 
