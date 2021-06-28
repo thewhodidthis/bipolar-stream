@@ -8,7 +8,7 @@ Download from the _npm_ registry:
 
 ```sh
 # Add to package.json
-npm install @thewhodidthis/bipolar-stream
+npm install bipolar-stream
 
 # Try out the enclosed example
 node node_modules/bipolar-stream/example
