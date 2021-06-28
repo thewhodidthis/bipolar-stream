@@ -1,4 +1,4 @@
-import { Transform } from 'stream'
+import { Transform } from "stream"
 
 function bipolar(prev) {
   let memo = prev
@@ -11,7 +11,7 @@ function bipolar(prev) {
       memo = next
 
       callback(null, diff.toString())
-    }
+    },
   })
 }
 
