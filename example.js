@@ -1,6 +1,4 @@
-'use strict'
-
-const bender = require('./')
+import bender from './main.js'
 
 const random = (mid = 100) => Math.floor(Math.random() * mid) - (mid * 0.5)
 const filter = bender(100)
