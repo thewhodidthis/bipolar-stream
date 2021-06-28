@@ -1,8 +1,8 @@
-'use strict'
+import { Transform } from 'stream'
+import { assert, report } from 'tapeless'
+import bender from './main.js'
 
-const { Transform } = require('stream')
-const { ok, equal } = require('tapeless')
-const bender = require('./')
+const { ok, equal } = assert
 
 const offset = 100
 const filter = bender(offset)
@@ -16,3 +16,5 @@ ok
 equal
   .describe('math looks accurate', 'will compute')
   .test(parseInt(filter.read(), 10), offset - offset)
+
+report()
